@@ -3,7 +3,7 @@
 using namespace std;
 
 //if prime[i]==0, then it is a prime number
-//being sieve
+//begin sieve
 bool prime[1000006];
 void sieve(){
 
