@@ -20,32 +20,30 @@ long long prime_power(int n){
 
 
 
-//hash calculation for the string
-long long Hash(string &s){
+//hash calculation for each index of a string
+vector<long long> Hash(string &s){
     
     
     int n = s.size();
+    vector<long long> v(n);
     long long hash_value=0;
     
     for(int i=0;i<n;i++){
-        hash_value=(hash_value+(s[i]-'a'+1)*prime_power(i))%mod;
+        v[i]=hash_value=(hash_value+(s[i]-'a'+1)*prime_power(i))%mod;
     }
     
-    return hash_value;
+    return v;
 
 }
 
 
 
 
-
-
-
 int main()
 {
-    string s="dinar";
-    cout<<Hash(s);
-
+    string s="perseus";
+    vector<long long> v=Hash(s);
+    for(auto x:v)cout<<x<<" ";
 
     return 0;
 }
