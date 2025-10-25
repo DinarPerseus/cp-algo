@@ -56,9 +56,8 @@ void trieDelete(const string& s){
         cnt[node]--;
         if (cnt[node] == 0) {
             trie[path[i - 1]][ s[i - 1] - 'a' ] = 0; // unlink
-        } else {
-            break; // stop if still used by another word
-        }
+        } 
+        
     }
 
 
@@ -121,4 +120,5 @@ int main()
     for (int i = 1; i <= t; i++)solve(i);
     // cerr<<"Run Time : "<<((double)(clock()-z)/CLOCKS_PER_SEC);
     return 0;
+
 }
