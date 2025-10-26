@@ -16,7 +16,7 @@ int dp[10004][100][2];
 //here f is a fixed value, if f==1 then 
 //it's a fixed degit calculation 
 //otherwise it's can go up to digit 9
-int fn(int p,int sum,int f,string s){
+int fn(int p,int sum,int f,string &s){
     if(p==s.size()){
         if(sum==0)return 1;
         else return 0;
